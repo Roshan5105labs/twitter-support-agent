@@ -216,3 +216,30 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Secrets — never commit
+.env
+*.key
+.kaggle/
+kaggle.json
+
+# Raw data — never commit the 3M-row dataset
+data/raw/
+*.csv
+!data/sample/*.csv
+
+# Committed caches (allow through) but ignore stray ones
+*.pkl
+!eval/cache/*.pkl
+*.json
+!eval/cache/*.json
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.cache/
